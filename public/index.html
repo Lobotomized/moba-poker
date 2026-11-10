@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#111715">
+  <meta name="description" content="A multiplayer game of dice, nerve, and rising fortunes. Choose your character and take a seat at Dicebound.">
+  <title>Dicebound · The Velvet Table</title>
+  <link rel="stylesheet" href="/style.css">
+  <link rel="stylesheet" href="/poker.css">
+  <script src="/socket.io/socket.io.js" defer></script>
+  <script src="/app.js" defer></script>
+</head>
+<body>
+  <div class="ambient" aria-hidden="true"></div>
+  <header class="masthead">
+    <a class="brand" href="/" aria-label="Dicebound home"><span class="brand-mark">◈</span><span>DICEBOUND<small>A GAME OF FORTUNE & NERVE</small></span></a>
+    <nav><span id="connection" class="connection">Connecting</span><button class="icon-button" id="rules-button" aria-label="Read game rules">?</button></nav>
+  </header>
+  <main id="app" aria-live="polite"></main>
+  <div id="toast" class="toast" role="status"></div>
+  <dialog id="sheet">
+    <div class="sheet-top"><span class="eyebrow" id="sheet-kicker">THE TABLE</span><button id="close-sheet" class="icon-button" aria-label="Close dialog">×</button></div>
+    <div id="sheet-content"></div>
+  </dialog>
+  <noscript>This game uses plain JavaScript to connect to its Globby server. Please enable JavaScript to play.</noscript>
+</body>
+</html>
